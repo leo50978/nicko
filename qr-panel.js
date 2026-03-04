@@ -10,10 +10,10 @@ export default class QrPanel {
     if (!this.root) return;
     this.root.innerHTML = `
       <div class="ui-card p-6 text-center">
-        <div class="hero-surface panel mx-auto grid h-[220px] w-[220px] place-items-center text-white">
+        <div class="qr-code-surface mx-auto grid h-[220px] w-[220px] place-items-center">
           <div class="grid grid-cols-5 gap-2">
             ${Array.from({ length: 25 })
-              .map((_, index) => `<span class="h-6 w-6 rounded-[6px] ${index % 3 === 0 ? "bg-white" : "bg-white/15"}"></span>`)
+              .map((_, index) => `<span class="h-6 w-6 rounded-[6px] ${index % 3 === 0 ? "qr-code-cell" : "qr-code-cell qr-code-cell-soft"}"></span>`)
               .join("")}
           </div>
         </div>
