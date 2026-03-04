@@ -1,4 +1,5 @@
 import { renderInto } from "./dom.js";
+import { appHref } from "./router-state.js";
 
 export default class Breadcrumb {
   constructor(rootOrId, items = []) {
@@ -14,7 +15,7 @@ export default class Breadcrumb {
         ${this.items
           .map((item, index) => {
             const last = index === this.items.length - 1;
-            return `${index > 0 ? '<span>/</span>' : ""}${last ? `<span class="font-semibold text-[#0b1f3a]">${item.label}</span>` : `<a href="${item.href}">${item.label}</a>`}`;
+            return `${index > 0 ? '<span>/</span>' : ""}${last ? `<span class="font-semibold text-[#0b1f3a]">${item.label}</span>` : `<a href="${appHref(item.href)}">${item.label}</a>`}`;
           })
           .join("")}
       </nav>

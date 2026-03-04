@@ -1,5 +1,5 @@
 import { renderInto } from "./dom.js";
-import { buildUrl } from "./router-state.js";
+import { appHref, buildUrl } from "./router-state.js";
 
 export default class ServiceCta {
   constructor(rootOrId, service) {
@@ -15,7 +15,7 @@ export default class ServiceCta {
         <p class="ui-body mt-4 max-w-[760px] text-[#3c4b64]" data-motion-item>Le formulaire, le paiement, le suivi et les documents restent relies au meme espace client.</p>
         <div class="mt-5 flex flex-wrap gap-3" data-motion-item>
           <a class="ui-button ui-button-accent" href="${buildUrl("/create.html", { service: this.service.slug })}">Voir</a>
-          <a class="ui-button ui-button-secondary" href="/dashboard.html">Voir le dashboard</a>
+          <a class="ui-button ui-button-secondary" href="${appHref("/dashboard.html")}">Voir le dashboard</a>
         </div>
       </div>
     `;

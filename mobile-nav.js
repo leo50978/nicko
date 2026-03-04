@@ -1,6 +1,7 @@
 import { renderInto } from "./dom.js";
 import { PUBLIC_NAV } from "./navigation.js";
 import { t } from "./i18n-store.js";
+import { appHref } from "./router-state.js";
 
 export default class MobileNav {
   constructor(rootOrId) {
@@ -19,7 +20,7 @@ export default class MobileNav {
           </div>
           <nav class="mt-5 grid gap-3">
             ${PUBLIC_NAV.map((item) => `<a class="ui-chip justify-start" href="${item.href}">${t(item.key)}</a>`).join("")}
-            <a class="ui-button ui-button-primary mt-2" href="/login.html">${t("nav.login")}</a>
+            <a class="ui-button ui-button-primary mt-2" href="${appHref("/login.html")}">${t("nav.login")}</a>
           </nav>
         </div>
       </div>

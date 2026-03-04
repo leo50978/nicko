@@ -1,4 +1,5 @@
 import { renderInto } from "./dom.js";
+import { appHref } from "./router-state.js";
 import { setSession } from "./session-store.js";
 import { DEMO_SESSION } from "./mock-session.js";
 import { t } from "./i18n-store.js";
@@ -33,7 +34,7 @@ export default class AuthRegisterPage {
       event.preventDefault();
       const type = this.root.querySelector("select")?.value || "business";
       setSession({ ...DEMO_SESSION, userType: type });
-      window.location.href = "/dashboard.html";
+      window.location.href = appHref("/dashboard.html");
     });
   }
 }

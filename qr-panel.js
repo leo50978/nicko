@@ -1,4 +1,5 @@
 import { renderInto } from "./dom.js";
+import { appHref } from "./router-state.js";
 
 export default class QrPanel {
   constructor(rootOrId, qrCode) {
@@ -20,7 +21,7 @@ export default class QrPanel {
         <p class="mt-5 text-[18px] font-semibold text-[#0b1f3a]">${this.qrCode}</p>
         <div class="mt-4 flex flex-wrap justify-center gap-3">
           <button type="button" class="ui-button ui-button-primary">Partager</button>
-          <a class="ui-button ui-button-secondary" href="/sample-document.pdf" download="client-qr.pdf">Telecharger</a>
+          <a class="ui-button ui-button-secondary" href="${appHref("/sample-document.pdf")}" download="client-qr.pdf">Telecharger</a>
         </div>
       </div>
     `;

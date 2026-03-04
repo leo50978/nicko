@@ -1,4 +1,5 @@
 import { renderInto } from "./dom.js";
+import { appHref } from "./router-state.js";
 
 export default class CtaBanner {
   constructor(rootOrId, options = {}) {
@@ -19,8 +20,8 @@ export default class CtaBanner {
                 <p class="ui-body mt-4 text-[#3c4b64]">${this.options.description || ""}</p>
               </div>
               <div class="ui-link-row" data-motion-item>
-                ${this.options.primaryHref ? `<a class="ui-button ui-button-accent" href="${this.options.primaryHref}">${this.options.primaryLabel}</a>` : ""}
-                ${this.options.secondaryHref ? `<a class="ui-button ui-button-secondary" href="${this.options.secondaryHref}">${this.options.secondaryLabel}</a>` : ""}
+                ${this.options.primaryHref ? `<a class="ui-button ui-button-accent" href="${appHref(this.options.primaryHref)}">${this.options.primaryLabel}</a>` : ""}
+                ${this.options.secondaryHref ? `<a class="ui-button ui-button-secondary" href="${appHref(this.options.secondaryHref)}">${this.options.secondaryLabel}</a>` : ""}
               </div>
             </div>
           </div>

@@ -3,7 +3,7 @@ import { findServiceBySlug } from "./services.js";
 import { getLocale } from "./i18n-store.js";
 import { refreshSiteMotion } from "./motion.js";
 import { isAuthenticated } from "./session-store.js";
-import { getPageKey, getQueryParam, getServiceSlug } from "./router-state.js";
+import { appHref, getPageKey, getQueryParam, getServiceSlug } from "./router-state.js";
 import AppShell from "./app-shell.js";
 import HomePage from "./home-page.js";
 import ServicesPage from "./services-page.js";
@@ -68,7 +68,7 @@ export function boot() {
   document.documentElement.lang = getLocale();
 
   if (route.requiresAuth && !isAuthenticated()) {
-    window.location.href = "/login.html";
+    window.location.href = appHref("/login.html");
     return;
   }
 

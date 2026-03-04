@@ -1,4 +1,5 @@
 import { renderInto } from "./dom.js";
+import { appHref } from "./router-state.js";
 import { setSession } from "./session-store.js";
 import { DEMO_SESSION } from "./mock-session.js";
 import { t } from "./i18n-store.js";
@@ -22,8 +23,8 @@ export default class AuthLoginPage {
               <button type="submit" class="ui-button ui-button-primary">${t("nav.login")}</button>
             </form>
             <div class="mt-4 flex flex-wrap gap-3">
-              <a class="ui-meta font-semibold text-[#0b1f3a]" href="/register.html">${t("nav.register")}</a>
-              <a class="ui-meta font-semibold text-[#0b1f3a]" href="/forgot-password.html">Mot de passe oublie</a>
+              <a class="ui-meta font-semibold text-[#0b1f3a]" href="${appHref("/register.html")}">${t("nav.register")}</a>
+              <a class="ui-meta font-semibold text-[#0b1f3a]" href="${appHref("/forgot-password.html")}">Mot de passe oublie</a>
             </div>
           </div>
         </div>
@@ -32,7 +33,7 @@ export default class AuthLoginPage {
     this.root.querySelector("#login-form")?.addEventListener("submit", (event) => {
       event.preventDefault();
       setSession(DEMO_SESSION);
-      window.location.href = "/dashboard.html";
+      window.location.href = appHref("/dashboard.html");
     });
   }
 }

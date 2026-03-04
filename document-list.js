@@ -1,4 +1,5 @@
 import { renderInto } from "./dom.js";
+import { appHref } from "./router-state.js";
 
 export default class DocumentList {
   constructor(rootOrId, items = []) {
@@ -18,7 +19,7 @@ export default class DocumentList {
                   <p class="font-semibold text-[#0b1f3a]">${item.title}</p>
                   <p class="ui-meta mt-1 text-[#6f7d92]">${item.createdAt} · ${item.relatedOrderId}</p>
                 </div>
-                <a class="ui-button ui-button-secondary" href="${item.downloadUrl}" download="${item.fileName}">Telecharger</a>
+                <a class="ui-button ui-button-secondary" href="${appHref(item.downloadUrl)}" download="${item.fileName}">Telecharger</a>
               </div>
             `
           )

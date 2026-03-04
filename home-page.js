@@ -7,6 +7,7 @@ import FeatureList from "./feature-list.js";
 import ServiceGrid from "./service-grid.js";
 import StatStrip from "./stat-strip.js";
 import CtaBanner from "./cta-banner.js";
+import { appHref } from "./router-state.js";
 
 export default class HomePage {
   constructor(rootOrId) {
@@ -29,8 +30,8 @@ export default class HomePage {
               <h1 class="ui-display home-hero-title mt-4" data-motion-item>${t("home.title")}</h1>
               <p class="ui-subtitle mt-5 max-w-[620px] text-[#3c4b64]" data-motion-item>${t("home.lead")}</p>
               <div class="mt-7 flex flex-wrap gap-3" data-motion-item>
-                <a class="ui-button ui-button-primary" href="/services.html">${t("cta.discover")}</a>
-                <a class="ui-button ui-button-secondary" href="/dashboard.html">${t("cta.openDashboard")}</a>
+                <a class="ui-button ui-button-primary" href="${appHref("/services.html")}">${t("cta.discover")}</a>
+                <a class="ui-button ui-button-secondary" href="${appHref("/dashboard.html")}">${t("cta.openDashboard")}</a>
               </div>
               <div class="home-hero-metrics mt-8">
                 <div class="home-hero-stat" data-motion-item>

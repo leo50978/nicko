@@ -1,6 +1,7 @@
 import { resolveRoot } from "./dom.js";
 import { DASHBOARD_SECTIONS } from "./dashboard.js";
 import { t } from "./i18n-store.js";
+import { appHref } from "./router-state.js";
 
 export default class DashboardShell {
   constructor(rootOrId) {
@@ -28,7 +29,7 @@ export default class DashboardShell {
             <div>
               <div class="dashboard-mobile-bar ui-card mb-4 flex items-center justify-between gap-3 p-4 lg:hidden">
                 <span class="text-[18px] font-semibold text-[#0b1f3a]">${t("dashboard.title")}</span>
-                <a class="ui-button ui-button-secondary" href="/profile.html"><i class="fa-solid fa-user"></i></a>
+                <a class="ui-button ui-button-secondary" href="${appHref("/profile.html")}"><i class="fa-solid fa-user"></i></a>
               </div>
               <div id="dashboard-content-root"></div>
             </div>

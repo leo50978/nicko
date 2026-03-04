@@ -1,4 +1,5 @@
 import { renderInto } from "./dom.js";
+import { buildUrl } from "./router-state.js";
 import PaymentSummary from "./payment-summary.js";
 
 export default class DashboardPaymentsPage {
@@ -23,7 +24,7 @@ export default class DashboardPaymentsPage {
               <div class="rounded-[18px] border border-[#ece8df] p-4">
                 <p class="font-semibold text-[#0b1f3a]">ORD-2026-004</p>
                 <p class="ui-meta mt-1 text-[#6f7d92]">Microfinance / Credit · USD 180.00</p>
-                <a class="ui-button ui-button-primary mt-4" href="/payment.html?service=microfinance-credit&order=ORD-2026-004">Payer maintenant</a>
+                <a class="ui-button ui-button-primary mt-4" href="${buildUrl("/payment.html", { service: "microfinance-credit", order: "ORD-2026-004" })}">Payer maintenant</a>
               </div>
             </div>
           </div>

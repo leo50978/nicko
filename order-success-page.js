@@ -1,5 +1,5 @@
 import { renderInto } from "./dom.js";
-import { buildUrl } from "./router-state.js";
+import { appHref, buildUrl } from "./router-state.js";
 import Breadcrumb from "./breadcrumb.js";
 import AlertBox from "./alert-box.js";
 
@@ -22,7 +22,7 @@ export default class OrderSuccessPage {
             <p class="ui-body mt-4 text-[#3c4b64]">La commande ${this.orderId} est enregistree. Vous pouvez la suivre immediatement ou continuer dans votre dashboard.</p>
             <div class="mt-6 grid gap-3 md:grid-cols-2">
               <a class="ui-button ui-button-primary" href="${buildUrl("/tracking.html", { tracking: "LG-TRACK-1001" })}">Suivre le dossier</a>
-              <a class="ui-button ui-button-secondary" href="/dashboard.html">Aller au dashboard</a>
+              <a class="ui-button ui-button-secondary" href="${appHref("/dashboard.html")}">Aller au dashboard</a>
             </div>
           </div>
           <div id="order-success-alert-root"></div>
