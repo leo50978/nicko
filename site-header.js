@@ -18,8 +18,8 @@ export default class SiteHeader {
       <header class="site-header-shell sticky top-0 z-50">
         <div class="container-shell py-3 md:py-4">
           <div class="site-header-bar flex min-h-[84px] items-center justify-between gap-4 px-4 py-3 md:px-6">
-            <a href="/index.html" class="site-brand site-brand-logo-shell" aria-label="${t("nav.brand")}">
-              <img src="./logo1.png" alt="${t("nav.brand")}" class="site-brand-logo" loading="eager" decoding="async" />
+            <a href="/index.html" class="site-brand site-brand-logo-shell site-brand-logo-shell-wide" aria-label="${t("nav.brand")}">
+              <img src="./logo.jpeg" alt="${t("nav.brand")}" class="site-brand-logo site-brand-logo-wide" loading="eager" decoding="async" />
             </a>
             <nav class="hidden items-center gap-6 lg:flex">
               ${PUBLIC_NAV.map((item) => `<a class="site-nav-link ui-meta font-semibold transition" href="${item.href}">${t(item.key)}</a>`).join("")}
