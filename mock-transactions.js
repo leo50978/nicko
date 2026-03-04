@@ -1,0 +1,38 @@
+export const MOCK_TRANSACTIONS = [
+  {
+    id: "TX-001",
+    type: "payment",
+    label: "Depot dossier immobilier",
+    amount: -320,
+    currency: "USD",
+    status: "paid",
+    date: "2026-02-26",
+  },
+  {
+    id: "TX-002",
+    type: "credit",
+    label: "Remboursement trop-percu",
+    amount: 45,
+    currency: "HTG",
+    status: "delivered",
+    date: "2026-02-25",
+  },
+  {
+    id: "TX-003",
+    type: "payment",
+    label: "Commande PDF attestation",
+    amount: -24,
+    currency: "USD",
+    status: "paid",
+    date: "2026-02-24",
+  },
+  {
+    id: "TX-004",
+    type: "payment",
+    label: "Livraison express",
+    amount: -78,
+    currency: "DOP",
+    status: "pending",
+    date: "2026-02-22",
+  },
+];
