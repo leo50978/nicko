@@ -97,5 +97,6 @@ export default class ServicesPage {
     }).render();
 
     refreshSiteMotion(this.root);
+
   }
 }

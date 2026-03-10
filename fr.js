@@ -5,6 +5,7 @@ export default {
       brand: "LE GOUVERNEUR",
       home: "Accueil",
       services: "Services",
+      catalogue: "Catalogue",
       orders: "Commander",
       dashboard: "Espace client",
       transactions: "Transactions",

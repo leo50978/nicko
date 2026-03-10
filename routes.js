@@ -6,6 +6,7 @@ export const PAGE_DEFINITIONS = {
   orderPayment: { key: "orderPayment", layout: "public", requiresAuth: false, pageClass: "orderPayment" },
   orderTracking: { key: "orderTracking", layout: "public", requiresAuth: false, pageClass: "orderTracking" },
   orderSuccess: { key: "orderSuccess", layout: "public", requiresAuth: false, pageClass: "orderSuccess" },
+  catalogue: { key: "catalogue", layout: "public", requiresAuth: false, pageClass: "catalogue" },
   login: { key: "login", layout: "public", requiresAuth: false, pageClass: "login" },
   register: { key: "register", layout: "public", requiresAuth: false, pageClass: "register" },
   forgotPassword: { key: "forgotPassword", layout: "public", requiresAuth: false, pageClass: "forgotPassword" },

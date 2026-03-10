@@ -80,6 +80,28 @@ export default class HomePage {
       </section>
       <section class="section-space-tight">
         <div class="container-shell">
+          <div class="home-proof-shell">
+            <div>
+              <div id="home-catalogue-title-root"></div>
+              <div class="mt-7" data-motion-item>
+                <a class="ui-button ui-button-primary" href="${appHref("/catalogue.html")}">Visiter le catalogue</a>
+              </div>
+            </div>
+            <div class="home-proof-visual" data-motion-stagger>
+              <div class="home-proof-image" data-motion-item>
+                <img
+                  src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=1200&q=80"
+                  alt="Catalogue de produits technologiques"
+                  class="home-proof-image-media"
+                  loading="lazy"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section-space-tight">
+        <div class="container-shell">
           <div id="home-media-title-root"></div>
           <div class="home-media-shell mt-8">
             <a class="home-video-showcase" href="${videoVisual.route}" data-motion-pop>
@@ -192,6 +214,12 @@ export default class HomePage {
     }).render();
 
     new ServiceGrid(this.root.querySelector("#home-services-grid-root"), SERVICE_CATALOG).render();
+
+    new SectionTitle(this.root.querySelector("#home-catalogue-title-root"), {
+      eyebrow: "Catalogue de produits",
+      title: "Explorez nos produits technologiques",
+      description: "Une sélection d'outils et d'appareils pour la communication, le transport, la maison et plus encore.",
+    }).render();
 
     new SectionTitle(this.root.querySelector("#home-media-title-root"), {
       eyebrow: "Media",

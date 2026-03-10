@@ -13,6 +13,7 @@ import OrderPaymentPage from "./order-payment-page.js";
 import OrderTrackingPage from "./order-tracking-page.js";
 import OrderSuccessPage from "./order-success-page.js";
 import DashboardHomePage from "./dashboard-home-page.js";
+import CataloguePage from "./catalogue-page.js";
 import DashboardTransactionsPage from "./dashboard-transactions-page.js";
 import DashboardDocumentsPage from "./dashboard-documents-page.js";
 import DashboardPaymentsPage from "./dashboard-payments-page.js";
@@ -31,6 +32,7 @@ const PAGE_CLASS_MAP = {
   orderPayment: OrderPaymentPage,
   orderTracking: OrderTrackingPage,
   orderSuccess: OrderSuccessPage,
+  catalogue: CataloguePage,
   dashboardHome: DashboardHomePage,
   dashboardTransactions: DashboardTransactionsPage,
   dashboardDocuments: DashboardDocumentsPage,
