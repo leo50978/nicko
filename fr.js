@@ -50,9 +50,9 @@ export default {
     },
     services: {
       immobilier: {
-        title: "Immobilier",
-        short: "Location, vente et gestion de biens.",
-        description: "Pilotez vos besoins immobiliers avec un accompagnement fiable du premier contact a la remise des documents.",
+        title: "Le Gouverneur Immobilier",
+        short: "Vente, location, gestion, investissement et developpement de biens.",
+        description: "Confiez vos projets immobiliers a une structure capable de vendre, louer, gerer, valoriser et accompagner vos decisions d'investissement avec une presentation plus elegante et un suivi plus rassurant.",
       },
       importExport: {
         title: "Import - Export",

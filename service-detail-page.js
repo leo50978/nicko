@@ -48,6 +48,13 @@ export default class ServiceDetailPage {
   }
 
   renderMediaShowcase() {
+    const stats = this.service.expertisePillars || [
+      { label: "Sous-services", value: this.service.subServices.length },
+      { label: "Etapes", value: this.service.process.length },
+      { label: "Devises", value: this.service.currencies.length },
+      { label: "Documents", value: this.service.requiredDocs.length },
+    ];
+
     return `
       <section class="section-space-tight">
         <div class="container-shell">
@@ -58,12 +65,7 @@ export default class ServiceDetailPage {
                 <h2 class="ui-title mt-3">Une experience visuelle pour ${this.getServiceName()}</h2>
                 <p class="ui-body mt-4 text-[#3c4b64]">Cette page rassemble la presentation du service, les offres disponibles, les etapes de traitement et les points de verification avant validation.</p>
                 <div class="mt-6 grid gap-3 sm:grid-cols-2">
-                  ${[
-                    { label: "Sous-services", value: this.service.subServices.length },
-                    { label: "Etapes", value: this.service.process.length },
-                    { label: "Devises", value: this.service.currencies.length },
-                    { label: "Documents", value: this.service.requiredDocs.length },
-                  ]
+                  ${stats
                     .map(
                       (item) => `
                         <div class="surface-tile p-5">
@@ -83,8 +85,8 @@ export default class ServiceDetailPage {
                   <source src="${DEMO_VIDEO}" type="video/mp4" />
                 </video>
                 <div class="pointer-events-none absolute inset-x-8 bottom-8 rounded-[24px] border border-white/10 bg-[#04101f]/80 p-4 text-white backdrop-blur">
-                  <p class="ui-eyebrow text-white/55">Apercu video</p>
-                  <p class="mt-2 text-[18px] font-semibold text-white">${this.service.process.join(" · ")}</p>
+                  <p class="ui-eyebrow text-white/55">Apercu service</p>
+                  <p class="mt-2 text-[18px] font-semibold text-white">${this.service.process.join(" / ")}</p>
                 </div>
               </div>
             </div>
@@ -113,7 +115,7 @@ export default class ServiceDetailPage {
               <div class="absolute inset-x-7 bottom-7 rounded-[24px] bg-white/88 p-5 backdrop-blur">
                 <p class="ui-eyebrow text-[#6f7d92]">${lead.label}</p>
                 <p class="mt-2 text-[24px] font-semibold text-[#0b1f3a]">${this.getServiceName()}</p>
-                <p class="ui-body mt-2 text-[#3c4b64]">${this.service.subServices.join(" · ")}</p>
+                <p class="ui-body mt-2 text-[#3c4b64]">${this.service.subServices.join(" / ")}</p>
               </div>
             </div>
             <div class="grid gap-5">
@@ -136,6 +138,24 @@ export default class ServiceDetailPage {
                 )
                 .join("")}
             </div>
+          </div>
+        </div>
+      </section>
+    `;
+  }
+
+  renderSignatureSection() {
+    if (!this.service.signatureStatement) return "";
+
+    return `
+      <section class="section-space-tight">
+        <div class="container-shell">
+          <div class="service-signature panel p-6 md:p-8" data-motion-stagger>
+            <div data-motion-item>
+              <p class="ui-eyebrow">Positionnement</p>
+              <h2 class="ui-title mt-3">Une image immobiliere plus elegante et plus complete</h2>
+            </div>
+            <p class="ui-body mt-5 max-w-[900px] text-[#3c4b64]" data-motion-item>${this.service.signatureStatement}</p>
           </div>
         </div>
       </section>
@@ -192,6 +212,7 @@ export default class ServiceDetailPage {
       <section class="section-space-tight">
         <div class="container-shell"><div id="service-overview-root"></div></div>
       </section>
+      ${this.renderSignatureSection()}
       <section class="section-space">
         <div class="container-shell">
           <div id="service-offers-title-root"></div>

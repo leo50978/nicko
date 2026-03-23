@@ -16,20 +16,87 @@ export const SERVICE_CATALOG = [
     supportsPayment: true,
     supportsTracking: true,
     supportsDocuments: true,
+    heroBadge: "Le Gouverneur Immobilier",
     currencies: ["USD", "HTG", "DOP"],
-    subServices: ["Location", "Vente", "Gestion locative"],
-    highlights: ["Mandats fiables", "Visites programmees", "Suivi dossier"],
+    subServices: ["Vente & achat", "Location", "Gestion immobiliere", "Investissement", "Developpement", "Evaluation"],
+    highlights: ["Accompagnement complet", "Presentation premium des biens", "Suivi transparent", "Solutions pour particuliers et investisseurs"],
     process: ["Analyse du besoin", "Selection de biens", "Validation", "Remise des documents"],
-    requiredDocs: ["Piece d'identite", "Justificatif de revenus", "Reference ou mandat"],
+    requiredDocs: ["Piece d'identite", "Mandat ou reference du bien", "Coordonnees du proprietaire ou acquereur", "Documents du bien si disponibles"],
     pricing: {
       base: 120,
       currency: "USD",
-      note: "Commission et frais variables selon la mission.",
+      note: "Honoraires et commissions adaptes selon le type de mission, la valeur du bien et le niveau d'accompagnement souhaite.",
     },
     faq: [
-      "Pouvez-vous gerer un bien a distance ?",
-      "Proposez-vous des biens verifies uniquement ?",
+      "Pouvez-vous accompagner une vente ou une location a distance ?",
+      "Proposez-vous des services de gestion et de promotion du bien ?",
     ],
+    overviewTitle: "Une offre immobiliere complete, claire et rentable",
+    overviewText:
+      "Le Gouverneur Immobilier reunit vente, location, gestion, conseil et developpement dans une experience plus serieuse, plus fluide et plus rassurante pour les proprietaires, locataires, acheteurs et investisseurs.",
+    offerCards: [
+      {
+        title: "Vente et achat de proprietes",
+        description: "Un accompagnement commercial structure pour vendre plus vite ou trouver le bon bien au bon prix.",
+        bullets: ["Maisons, terrains, appartements", "Recherche ciblee pour les clients", "Negociation acheteur-vendeur", "Estimation du prix du bien"],
+      },
+      {
+        title: "Location de biens",
+        description: "Une mise en location professionnelle avec diffusion, visites et formalisation des accords.",
+        bullets: ["Maisons et appartements", "Locaux commerciaux", "Recherche de locataires", "Contrats de bail"],
+      },
+      {
+        title: "Gestion immobiliere",
+        description: "Une gestion continue pour securiser le bien, les revenus et la relation avec les occupants.",
+        bullets: ["Collecte des loyers", "Gestion des locataires", "Maintenance et reparations", "Rapports financiers proprietaire"],
+      },
+      {
+        title: "Promotion et marketing immobilier",
+        description: "Des annonces mieux presentees pour attirer plus rapidement les bons profils.",
+        bullets: ["Publicite des proprietes", "Photos et videos", "Publication en ligne", "Organisation des visites"],
+      },
+      {
+        title: "Conseil et investissement immobilier",
+        description: "Une lecture plus strategique du marche pour investir avec plus de visibilite.",
+        bullets: ["Analyse du marche", "Conseils aux investisseurs", "Etude de rentabilite", "Achat pour investissement"],
+      },
+      {
+        title: "Developpement immobilier",
+        description: "Un appui sur les projets immobiliers depuis le terrain jusqu'a la valorisation finale.",
+        bullets: ["Construction de maisons ou immeubles", "Lotissement de terrains", "Projets residentiels", "Projets commerciaux"],
+      },
+      {
+        title: "Evaluation et expertise",
+        description: "Des evaluations utiles pour vendre, financer, negocier ou rassurer des partenaires.",
+        bullets: ["Valeur du bien", "Expertise technique", "Rapport pour banques", "Rapport pour investisseurs"],
+      },
+      {
+        title: "Services financiers lies a l'immobilier",
+        description: "Un accompagnement sur les leviers qui facilitent l'acquisition et la protection du bien.",
+        bullets: ["Aide pour pret immobilier", "Conseils en financement", "Assurance habitation", "Orientation sur les services juridiques lies"],
+      },
+      {
+        title: "Services annexes",
+        description: "Des prestations complementaires pour renforcer l'attractivite et la mise en valeur du bien.",
+        bullets: ["Inspection de maison", "Renovation et reparation", "Amenagement interieur", "Service de demenagement"],
+      },
+    ],
+    expertisePillars: [
+      {
+        value: "9",
+        label: "poles de services immobiliers",
+      },
+      {
+        value: "360",
+        label: "accompagnement de la recherche a la gestion",
+      },
+      {
+        value: "3",
+        label: "profils cibles: proprietaires, acheteurs, investisseurs",
+      },
+    ],
+    signatureStatement:
+      "Pour la marque Le Gouverneur Omni-Services Immobilier, la page met en avant une image plus premium: vente, location, gestion, investissement, construction, renovation et evaluation dans un seul univers coherent.",
   },
   {
     id: "import-export",

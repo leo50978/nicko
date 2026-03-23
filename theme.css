@@ -1623,6 +1623,48 @@ details {
   background: rgba(255, 250, 242, 0.18);
 }
 
+.service-signature {
+  overflow: hidden;
+  position: relative;
+  background:
+    radial-gradient(circle at top right, rgba(217, 181, 102, 0.18), transparent 24%),
+    linear-gradient(135deg, rgba(255, 252, 246, 0.96), rgba(245, 233, 209, 0.98));
+}
+
+.service-signature::after {
+  content: "";
+  position: absolute;
+  right: -70px;
+  top: -70px;
+  width: 220px;
+  height: 220px;
+  border-radius: 999px;
+  background: radial-gradient(circle, rgba(217, 181, 102, 0.22), transparent 66%);
+  pointer-events: none;
+}
+
+.service-offer-card {
+  min-height: 100%;
+}
+
+.service-offer-bullet {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  color: #5f513f;
+  line-height: 1.55;
+}
+
+.service-offer-bullet-dot {
+  width: 10px;
+  height: 10px;
+  margin-top: 0.45rem;
+  flex: 0 0 10px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, rgba(62, 44, 20, 0.98), rgba(186, 138, 53, 0.94));
+  box-shadow: 0 4px 10px rgba(109, 77, 31, 0.2);
+}
+
 @media (min-width: 768px) {
   .home-hero-metrics {
     grid-template-columns: repeat(3, minmax(0, 1fr));
